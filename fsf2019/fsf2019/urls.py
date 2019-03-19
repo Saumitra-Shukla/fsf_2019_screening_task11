@@ -22,4 +22,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('baseapp/', include('django.contrib.auth.urls')),
+    path('baseapp/', include("baseapp.urls", namespace="baseapp")),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Bootsrap Practical</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'lib/bootstrap4.min.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <script src="{% static 'lib/jquery-3.3.1.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="{% static 'lib/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style type="text/css">
+        .table-borderless td, .table-borderless th {
+            border: 0;
+        }
+    </style>
+</head>
+
+<body style="background-color: #b27300;">
+
+    <!-- Header start -->
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-top fixed-top bg-dark" style="box-shadow: 0px 5px 5px #4b4b4d;">
+        <div class="container">
+            <a href="http://www.indianrailways.gov.in/railwayboard/" class="navbar-brand">
+                <img src="{% static 'img/fossee.jpg' %}" class="img-fluid" width="100">
+            </a>
+            <!--<h2>MINISTRY OF RAILWAYS : PROJECT - MEDIA PLAN</h2> -->
+
+            <button class="navbar-toggler bg-success" data-toggle="collapse" data-target="#navid">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navid">
+                {% if user.is_authenticated %}
+                <ul class="navbar-nav text-center ml-auto" id="logged">
+                    <li class="nav-item dropdown mx-3">
+                        <a href="#" class="nav-link mt-2" data-toggle="dropdown">
+                            <i class="far fa-bell fa-2x"></i>
+                            <small><span class="badge badge-pill badge-warning notification text-warning">.</span></small>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item"> Notification 1 </a></li>
+                            <li><a href="#" class="dropdown-item"> Notification 2 </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown mx-3">
+                        <!-- <a href="{% url 'baseapp:profile' %}" class="nav-link " data-toggle="dropdown">
+                          <img src="{{ user.profile.picture.url}}" class="rounded-circle img-fluid" width="50">
+                        </a> -->
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header"> </li>
+                            <li><a href="{% url 'baseapp:profile' %}" class="dropdown-item">Profile </a></li>
+                           <li><a href="#" class="dropdown-item">Favourites </a></li>
+                            <li class="dropdown-header"> </li>
+                            <li><a href="{% url 'baseapp:logout' %}" class="dropdown-item">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {% else %}
+                <ul class="navbar-nav text-center ml-auto" id="not-logged">
+                    <li class="nav-item m-2">
+                        <a href="{% url 'login' %}" class=" text-white btn btn-success">LogIn / SignUp</a>
+                    </li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <script type="text/javascript">
+        $('.navbar .dropdown').hover(function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(150).slideDown();
+        }, function() {
+            $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp()
+        });
+    </script>
+    <!--header end -->
+
+    <div class="container"><br><br><br><br></div>
+    <div class="container bg-dark text-white" style="min-height: 800px; border-radius: 7px 7px 0px 0px;box-shadow: 0px 5px 5px #4b4b4d;">
+        <div class="row-offcanvas row-offcanvas-left">
+
+            <!-- sidebar start --><br>
+            <div id="sidebar" class="sidebar-offcanvas text-white mt-1 bg-dark" style="border: 2px solid white; box-shadow: 5px 5px 5px #4b4b4d; height:750px;border-radius: 8px;">
+                <div class="mt-3">
+                    <div class="text-center my-2">
+                        <h5> Welcome </h5>
+                    </div>
+                    <hr class="bg-white">
+                    <div id="user" class="">
+                        <img class="img-responsive rounded-circle ml-4" src="{{ user.profile.picture.url}}" width="60">
+                        <small class="float-right mr-4">
+                        {{user.profile.name}} <br>
+                        </small>
+                    </div>
+    
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $('[data-toggle=offcanvas]').click(function() {
+                        $('.row-offcanvas').toggleClass('active');
+                    });
+                });
+                $('#tog').hide();
+                $('#tog').show();
+            </script>
+            <!--sidebar end -->
+
+            <div id="main" class="">
+
+                {% block content %}
+                {% endblock %}
+                <!-- main content go here -->
+
+
+            </div>
+
+        </div><br><br>
+
+        <!-- Start footer -->
+        <footer id="mu-footer" class="mx-auto mt-2">
+                <div class="mu-footer-area">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mu-footer-right">
+                                <div class="mu-social-media">
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://plus.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+                                    <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <div class="mu-footer-left">
+                                <p class="mu-copy-right">&copy; Copyright <a href="#"> www.fossee.com </a>All right reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </footer>
+        <!-- End footer -->
+
+    </div>
+</body>
+
+</html>
