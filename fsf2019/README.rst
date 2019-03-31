@@ -120,15 +120,4 @@ With the source code that works for each version of Django,
 and maybe tweaking some configurations can works with oldest versions too.
 
 
-Some screenshots
-----------------
-
-.. image:: docs/source/_static/img/django-mysite-task-change.png
-   :alt: Django mysite - Task Chance View
-
-
-.. image:: docs/source/_static/img/django-mysite-task-change-mobile.png
-   :alt: Django mysite - Task Chance View, mobile version
-
-
 
