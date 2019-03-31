@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-31 08:41-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mariano Ruiz <mrsarm@gmail.com>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: tasks/admin.py:24
+msgid "More..."
+msgstr "Mas informacion..."
+
+#: tasks/apps.py:7
+msgid " Task Management"
+msgstr " Gestión de Tareas"
+
+#: tasks/models.py:8
+msgid "Task"
+msgstr "Tarea"
+
+#: tasks/models.py:9
+msgid "Tasks"
+msgstr "Tareas"
+
+#: tasks/models.py:12
+msgid "To Do"
+msgstr "Para Hacer"
+
+#: tasks/models.py:13
+msgid "In Progress"
+msgstr "En Progreso"
+
+#: tasks/models.py:14
+msgid "Blocked"
+msgstr "Bloqueado"
+
+#: tasks/models.py:15
+msgid "Done"
+msgstr "Hecho"
+
+#: tasks/models.py:16
+msgid "Dismissed"
+msgstr "Desestimado"
+
+#: tasks/models.py:20
+msgid "Low"
+msgstr "Baja"
+
+#: tasks/models.py:21
+msgid "Normal"
+msgstr "Normal"
+
+#: tasks/models.py:22
+msgid "High"
+msgstr "Alta"
+
+#: tasks/models.py:23
+msgid "Critical"
+msgstr "Crítica"
+
+#: tasks/models.py:24
+msgid "Blocker"
+msgstr "Bloqueada"
+
+#: tasks/models.py:27
+msgid "title"
+msgstr "título"
+
+#: tasks/models.py:28 tasks/models.py:50
+msgid "description"
+msgstr "descripción"
+
+#: tasks/models.py:29
+msgid "resolution"
+msgstr "resolución"
+
+#: tasks/models.py:30
+msgid "deadline"
+msgstr "fecha límite"
+
+#: tasks/models.py:31
+msgid "assigned to"
+msgstr "asignado a"
+
+#: tasks/models.py:33
+msgid "state"
+msgstr "estado"
+
+#: tasks/models.py:34
+msgid "priority"
+msgstr "prioridad"
+
+#: tasks/models.py:35
+msgid "created by"
+msgstr "creado por"
+
+#: tasks/models.py:37
+msgid "created at"
+msgstr "creado en"
+
+#: tasks/models.py:38
+msgid "last modified"
+msgstr "última vez modificado"
+
+#: tasks/models.py:46
+msgid "Item"
+msgstr "Item"
+
+#: tasks/models.py:47
+msgid "Check List"
+msgstr "Check List"
+
+#: tasks/models.py:51
+msgid "done?"
+msgstr "¿listo?"
